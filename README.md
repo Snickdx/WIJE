@@ -31,10 +31,11 @@ On the gmail account:
 * allow less secure apps https://myaccount.google.com/lesssecureapps
 * enable smtp https://mail.google.com/mail/u/0/#settings/fwdandpop
 * Edit email settings in config.inc.php
-```
+
 
 _Notice_ : A domain must be registered on the hosting server along with SSL for email to work
 
+```
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
 ;;;;;;;;;;;;;;;;;;
