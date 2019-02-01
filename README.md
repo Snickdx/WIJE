@@ -257,3 +257,23 @@ Best wishes and regards,
 {$editorialContactSignature}
 
 ```
+## Fresh Install Steps
+1. Download OJS 3.x https://openjournalsystems.com/ojs-download/
+2. unzip on server
+3. Change owner of www-data to various folders in readme
+```
+$ sudo chown -R www-data plugins/*
+$ sudo chown -R public
+$ sudo chown -R cache
+$ sudo chown -R cache/t_cache
+$ sudo chown -R cache/t_config
+$ sudo chown -R cache/t_compile
+$ cache/_db
+```
+4. rename config.template.php to config.inc.php
+5. enable php_mysql.dl in php.ini file (locate with php -i | grep "Loaded Configuration File")
+6. create mysql user for ojs GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+7. create upload directory chown to www-data
+8. add wije journal, authors guidelines and logo user accounts
+9. Make custom email templates from the previous section in this readme
+10. Setup email in config.inc.php as in the email settings section in this readme
